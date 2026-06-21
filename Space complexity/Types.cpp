@@ -1,3 +1,5 @@
+/*Space complexity measures how much memory (space) an algorithm requires as the 
+input size increases*/
 //O(1)-Constant space
 #include<iostream>
 using namespace std;
@@ -20,18 +22,18 @@ int linear(){
 }
 
 //o(n Square)-Quadratic Space
-/*int demo(){
+int demo(){
     int n=5;
-    int matrix=[n][n]; //no. n =no.elements (5 x 5 = 25 elements)
-    for(int i=0;i<=n;i++)
+    int matrix[n][n]; //no. n =no.elements (5 x 5 = 25 elements)
+    for(int i=0;i<n;i++)
     {
-        for(int j=0;j<=n;j++)
+        for(int j=0;j<n;j++)
         {
             matrix[n][n]=i+j;
         }
     }
     return n*n;
-} ------*/
+} 
 
 //Recursion space
 int print(int n)
@@ -39,9 +41,9 @@ int print(int n)
     if(n==0)
         return 0;
 
-    cout<<n<<endl;
+    cout<<n<<" ";
     print(n-1);
-    return n;
+    return 0;
 }
 
 int main()
@@ -54,11 +56,10 @@ int main()
     int space = linear();
     cout << space;
 
-  //  cout << "\nQuadratic function(Total elements)= ";
-// cout << demo();
+    cout << "\nQuadratic function(Total elements)= ";
+    cout << demo();
 
     cout << "\nRecursion function: ";
     cout << print(5);
-     
     return   0;
 }
